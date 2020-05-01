@@ -83,7 +83,7 @@
             this.targetPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.targetPictureBox.TabIndex = 1;
             this.targetPictureBox.TabStop = false;
-            this.targetPictureBox.Click += new System.EventHandler(this.hitBullseye);
+            this.targetPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.hitBullseye);
             // 
             // startButton
             // 

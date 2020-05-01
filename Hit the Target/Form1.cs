@@ -36,18 +36,23 @@ namespace Hit_the_Target
             timer1.Enabled = false;
         }
 
-        private void hitBullseye(object sender, EventArgs e)
-        {
-            hitTarget++;
-            timer1.Enabled = false;
-            
-            //MessageBox.Show("You were " + Convert.ToString(Math.Sqrt(Math.Pow(targetPictureBox.Width - 50, 2) + Math.Pow(targetPictureBox.Height - 50, 2)) <= radius));
-        }
-
         private void missedBullseye(object sender, EventArgs e)
         {
             timer1.Enabled = false;
             MessageBox.Show("You missed the target.");
+        }
+
+        /// <summary>
+        /// Works out the distance between the centre of
+        /// the circle and where the user clicked, and adds 
+        /// one to the hit target score.
+        /// </summary>
+        private void hitBullseye(object sender, MouseEventArgs e)
+        {
+            hitTarget++;
+            timer1.Enabled = false;
+
+            MessageBox.Show("You were " + Convert.ToString(Math.Sqrt(Math.Pow(e.X - 50, 2) + Math.Pow(e.Y - 50, 2))));
         }
 
         private void closeApplication(object sender, EventArgs e)
