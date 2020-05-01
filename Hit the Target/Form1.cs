@@ -52,7 +52,7 @@ namespace Hit_the_Target
             hitTarget++;
             timer1.Enabled = false;
 
-            MessageBox.Show("You were " + Convert.ToString(Math.Sqrt(Math.Pow(e.X - 50, 2) + Math.Pow(e.Y - 50, 2))));
+            MessageBox.Show("You were " + Convert.ToString(Math.Sqrt(Math.Pow(e.X - 50, 2) + Math.Pow(e.Y - 50, 2))) + " pixels away from the centre");
         }
 
         private void closeApplication(object sender, EventArgs e)
